@@ -1,16 +1,15 @@
+// navbar links
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
-
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
 
-
-
+// scroll sections active link
 let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('heaader nav a');
+let navlink = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -19,22 +18,46 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top  < offset + height){
-            navLinks.forEach(links => {
+        if(top >= offset && top < offset + height){
+            navlink.forEach(links => {
                 links.classList.remove('active');
-                DocumentFragment.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             })
-        }
+        };
     })
+
+    // sticky navbar
+
+    let header = document.querySelector('header');
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    // remove toggle icon and navbar 
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
 
-let header = document.querySelector('header');
-header.classList.toggle('sticky',window.scrollY > 100);
+// scroll reveal
 
+ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
 
-menuIcon.classList.remove('bx-x');
-navbar-classList.remove('active');
+ScrollReveal().reveal('.home-content, .heading',{origin: 'top'});
+ScrollReveal().reveal('.home-img, .service-container, .portfolio-box, .contact form',{origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img',{origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content',{origin: 'right'});
 
+// multiple text
 
-
-
+const typed = new Typed('.multiple-text',{
+    strings: ['Problem Solver','Front Developer','Blockchain Ethusiast'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});

@@ -124,6 +124,19 @@ span
 
 .home-img img{
     width:25vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 .home-content p{
@@ -204,8 +217,9 @@ span
 .about-content p
 {
     font-size:1.6rem;
-    margin:2rem 0 3 rem;
+    margin:2rem 0 2rem;
 }
+
 
 .services h2{
     margin-bottom:1rem;
@@ -509,7 +523,36 @@ span
 
 @media(max-width:450px)
 {
+    html
+    {
+        font-size:50%;
+    }
+    .contact form .input-box input
+    {
+        width:100%;
+    }
+}
 
+@media(max-width: 365)
+{
+    .home-img img
+    {
+        width:90vw;
+    }
+
+    .about-img img{
+        width:90vw;
+    }
+
+    .footer{
+        flex-direction:column-reverse;
+    }
+
+    .footer p 
+    {
+        text-align:center;
+        margin-top: 2rem;
+    }
 }
 
 
