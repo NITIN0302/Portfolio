@@ -16,8 +16,10 @@
     --main-color:#0ef;
 }
 
+
 .arrow
 {
+    z-index:100;
     position:fixed;
     bottom:20px;
     right:40px;
@@ -470,6 +472,11 @@ span
         flex-direction: column;
     }
 
+    .home img
+    {
+        margin-top:50px;
+    }
+
     .home-content h3
     {
         font-size: 2.6rem;
@@ -537,7 +544,7 @@ span
     }
 }
 
-@media(max-width: 365)
+@media(max-width: 365px)
 {
     .home-img img
     {
