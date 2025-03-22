@@ -232,6 +232,10 @@ span
     margin-bottom:1rem;
 }
 
+.services{
+    background: var(--second-bg-color);
+}
+
 .service-container
 {
     display:flex;
@@ -244,11 +248,13 @@ span
     padding-bottom:10px;
     flex:1 1 30rem;
     text-align:center;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     border-radius:2rem;
     margin:20px 20px 20px 20px;
     border:0.2rem solid var(--bg-color);
     transition: .5s ease;
+    position: relative; 
+    padding-bottom: 30px; 
 }
 
 .services-box:hover
@@ -277,7 +283,7 @@ span
 
 .portfolio
 {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .portfolio h2
@@ -297,7 +303,7 @@ span
 {
     position:relative;
     border-radius:2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
     overflow: hidden;
     display: flex;
 }
@@ -371,6 +377,11 @@ span
     text-align: center;
     margin-bottom: 3rem;
 }
+
+.contact{
+    background: var(--second-bg-color);
+}
+
 .contact form .input-box
 {
     display:flex;
@@ -383,7 +394,7 @@ span
     padding:1.5rem;
     font-size:1.6rem;
     color:var(--text-area);
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -414,7 +425,7 @@ span
     align-items:center;
     flex-wrap:wrap;
     padding:2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text p
@@ -564,6 +575,51 @@ span
         text-align:center;
         margin-top: 2rem;
     }
+}
+
+.services-box .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 10px 30px; 
+}
+
+.experience-1{
+    background: var(--second-bg-color);
+    margin:10px;
+    padding:10px;
+    border:.2rem solid var(--second-bg-color);
+    border-radius:10px;
+    transition: .5s ease;
+}
+
+.experience-1:hover{
+    border:.2rem solid #0ef;
+    border-radius:10px;
+    transform: scale(1.02);
+}
+
+.experience-content h2
+{
+    text-align:center;
+    line-height:1.2;
+}
+
+.experience-content h3
+{
+    font-size: 2.3rem;
+}
+
+.experience-content p
+{
+    font-size:1.6rem;
+    margin:1rem 0 2rem;
+}
+
+.experience-content .heading{
+    margin-left:10px;
 }
 
 
